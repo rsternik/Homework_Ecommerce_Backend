@@ -3,11 +3,9 @@ const router = require('express').Router();
 // Required models
 const { Product, Category, Tag, ProductTag } = require('../../models');
 
-
-
-// get all products
+// Get all products
 router.get('/', async (req, res) => {
-  
+
   // find all products
   try {
     const productData = await Product.findAll({
@@ -19,13 +17,13 @@ router.get('/', async (req, res) => {
   }
 });
 
-// get one product
+// Find one product
 router.get('/:id', (req, res) => {
-  
+
   // find a single product by its `id`
   try {
     const productIdData = await Product.findByPk(req.params.id, {
-      
+
       include: [{ model: Category }, { model: Tag, through: ProductTag }],
     });
 
@@ -40,7 +38,7 @@ router.get('/:id', (req, res) => {
   }
 });
 
-// create new product
+// Create new product
 router.post('/', (req, res) => {
   /* req.body should look like this...
     {
@@ -114,6 +112,7 @@ router.put('/:id', (req, res) => {
     });
 });
 
+// Delete product by id
 router.delete('/:id', (req, res) => {
   // delete one product by its `id` value
   try {
