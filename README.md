@@ -23,7 +23,7 @@ https://drive.google.com/file/d/1rOVf2rz7d-NCPdqZs8itRoxI5Mmj9vDS/view?usp=shari
 
 ## Screenshots
 
-![image](/assets/screenshot.PNG)
+![image](/Assets/screenshot.PNG)
 
 ## Contact 
 e-mail: rsternik.wg@gmail.com
