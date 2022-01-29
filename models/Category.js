@@ -31,5 +31,5 @@ Category.init(
   }
 );
 
-//export Category sequelize Model
+//export Category
 module.exports = Category;
